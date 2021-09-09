@@ -1,0 +1,12 @@
+.form-control:focus {
+    box-shadow: none;
+}
+
+input, textarea
+{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0%;
+    border-color: blue;
+}

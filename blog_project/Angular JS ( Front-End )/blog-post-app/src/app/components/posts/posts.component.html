@@ -1,0 +1,19 @@
+<div class="container pb-5">
+    <div class="row p-3">
+        <h2 class="pb-3" style="border-bottom: 4px solid rgb(33, 37, 41, 1)">
+          Blog posts
+        </h2>
+      </div>
+    <div *ngFor="let post of posts">
+        <div class="m-3 p-2 row shadow">
+            <h4 class="pb-0 mb-1"><a [routerLink] = "['/blogPost', post.Id]">{{post.Title}}</a></h4>
+            <h5 class="pt-0">{{post.Category}}</h5>
+        </div>
+    </div>
+
+    <div *ngIf="posts.length == 0">
+        <div class="m-3 p-2 row shadow">
+            <h4 class="pb-0 mb-1">There are no new blog posts.</h4>
+        </div>
+    </div>
+</div>
